@@ -5,11 +5,11 @@ package net.anthavio.joshi.client;
  * @author martin.vanek
  *
  */
-public class AbstractGroup {
+public class AbstractOperations {
 
 	protected final JoshiClient client;
 
-	public AbstractGroup(JoshiClient client) {
+	public AbstractOperations(JoshiClient client) {
 		this.client = client;
 	}
 }

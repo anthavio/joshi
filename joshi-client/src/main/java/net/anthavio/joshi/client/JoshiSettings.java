@@ -16,6 +16,8 @@ public class JoshiSettings {
 
 	private final String password;
 
+	private boolean useAuthToken; //https://www.openshift.com/developers/rest-api-tutorial
+
 	private Long cacheSeconds;
 
 	public JoshiSettings(String username, String password) {
@@ -51,12 +53,28 @@ public class JoshiSettings {
 		return serverUrl;
 	}
 
+	public String getUsername() {
+		return username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
 	public Long getCacheSeconds() {
 		return cacheSeconds;
 	}
 
 	public void setCacheSeconds(Long cacheSeconds) {
 		this.cacheSeconds = cacheSeconds;
+	}
+
+	public boolean isUseAuthToken() {
+		return useAuthToken;
+	}
+
+	public void setUseAuthToken(boolean useAuthToken) {
+		this.useAuthToken = useAuthToken;
 	}
 
 }

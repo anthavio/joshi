@@ -2,12 +2,14 @@ package net.anthavio.joshi.client.api;
 
 import java.util.List;
 
+import net.anthavio.joshi.client.JsonStringBuilder;
+
 /**
  * 
  * @author martin.vanek
  *
  */
-public class ApiFunction {
+public class ApiOperation {
 
 	private String rel;
 
@@ -18,6 +20,11 @@ public class ApiFunction {
 	private List<ApiParam> required_params;
 
 	private List<ApiParam> optional_params;
+
+	@Override
+	public String toString() {
+		return JsonStringBuilder.toString(this, true);
+	}
 
 	public String getRel() {
 		return rel;

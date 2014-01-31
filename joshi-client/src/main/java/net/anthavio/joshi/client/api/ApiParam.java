@@ -2,6 +2,8 @@ package net.anthavio.joshi.client.api;
 
 import java.util.List;
 
+import net.anthavio.joshi.client.JsonStringBuilder;
+
 /**
  * 
  * @author martin.vanek
@@ -20,6 +22,11 @@ public class ApiParam {
 	private List<String> valid_options;
 
 	private List<String> invalid_options;
+
+	@Override
+	public String toString() {
+		return JsonStringBuilder.toString(this, true);
+	}
 
 	public String getName() {
 		return name;

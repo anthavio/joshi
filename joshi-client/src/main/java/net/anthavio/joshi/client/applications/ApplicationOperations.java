@@ -1,6 +1,6 @@
 package net.anthavio.joshi.client.applications;
 
-import net.anthavio.joshi.client.AbstractGroup;
+import net.anthavio.joshi.client.AbstractOperations;
 import net.anthavio.joshi.client.JoshiClient;
 
 /**
@@ -9,9 +9,9 @@ import net.anthavio.joshi.client.JoshiClient;
  * @author martin.vanek
  *
  */
-public class ApplicationsGroup extends AbstractGroup {
+public class ApplicationOperations extends AbstractOperations {
 
-	public ApplicationsGroup(JoshiClient client) {
+	public ApplicationOperations(JoshiClient client) {
 		super(client);
 	}
 

@@ -31,13 +31,18 @@ public class JoshiResponse<T> implements Serializable {
 	private List<Message> messages;
 
 	@JsonProperty("status")
-	private String status;//enum... "ok"
+	private String status;//enum... "ok", "internal_server_error"
 
 	@JsonProperty("type")
 	private String type; //enum...
 
 	@JsonProperty("errors")
 	private Map errors;
+
+	@Override
+	public String toString() {
+		return JsonStringBuilder.toString(this, true);
+	}
 
 	public String getVersion() {
 		return version;
@@ -117,6 +122,11 @@ public class JoshiResponse<T> implements Serializable {
 
 		private String text;
 
+		@Override
+		public String toString() {
+			return JsonStringBuilder.toString(this, true);
+		}
+
 		public Integer getExit_code() {
 			return exit_code;
 		}
@@ -157,5 +167,13 @@ public class JoshiResponse<T> implements Serializable {
 			this.text = text;
 		}
 
+	}
+
+	public static class JoshiResponseData implements Serializable {
+
+		private static final long serialVersionUID = 1L;
+
+		@JsonProperty("links")
+		private Map links;
 	}
 }
