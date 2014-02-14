@@ -1,6 +1,6 @@
 package net.anthavio.joshi.browser;
 
-import net.anthavio.jetty.JettyWrapper;
+import net.anthavio.sewer.jetty.JettyWrapper;
 
 /**
  * Main class to execute in standalone mode
